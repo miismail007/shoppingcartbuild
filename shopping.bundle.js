@@ -289,7 +289,7 @@ var ProductItem = function ProductItem(_ref) {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
       src: product.image,
       alt: product.name,
-      className: "h-32 w-32 object-cover mb-4"
+      className: "h-full w-full object-contain" // Use h-full and w-full to fill the container
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
       className: "text-lg font-semibold",
       children: product.name
