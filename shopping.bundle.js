@@ -41,14 +41,14 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 var products = [{
   id: 1,
-  name: "Product 1",
-  price: 20,
-  image: "product1.jpg"
+  name: "Mac Book Air",
+  price: "58,990",
+  image: "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111883_macbookair.png"
 }, {
   id: 2,
-  name: "Product 2",
-  price: 40,
-  image: "product2.jpg"
+  name: "IPhone 16",
+  price: "79,900",
+  image: "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/geo/Apple-iPhone-16-hero-geo-240909_inline.jpg.large.jpg"
 }
 // More products
 ];
