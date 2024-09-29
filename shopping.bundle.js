@@ -386,11 +386,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Index() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-  });
-}
 function mountShopping() {
   var _window$shoppingRoot;
   var includeInDom = _export__WEBPACK_IMPORTED_MODULE_2__["default"];
@@ -408,7 +403,7 @@ function mountShopping() {
   }
 
   // Render the component
-  window.shoppingRoot.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Index, {}));
+  window.shoppingRoot.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}));
 }
 
 /***/ }),
