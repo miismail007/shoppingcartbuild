@@ -2,65 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/export.ts":
-/*!***********************!*\
-  !*** ./src/export.ts ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! . */ "./src/index.tsx");
-
-var shoppingCart = {
-  init: function init() {
-    (0,___WEBPACK_IMPORTED_MODULE_0__.mountShopping)();
-  }
-};
-window.shoppingCart = shoppingCart;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (shoppingCart);
-
-/***/ }),
-
-/***/ "./src/index.tsx":
-/*!***********************!*\
-  !*** ./src/index.tsx ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   mountShopping: () => (/* binding */ mountShopping)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _export__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./export */ "./src/export.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-function Index() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-      children: "Hello Shopping"
-    })
-  });
-}
-function mountShopping() {
-  var includeInDom = _export__WEBPACK_IMPORTED_MODULE_2__["default"];
-  var targetElement = document.querySelector("#shoppingCart");
-  if (!window.shoppingRoot) {
-    window.shoppingRoot = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(targetElement);
-  }
-  window.shoppingRoot.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Index, {}));
-}
-
-/***/ }),
-
 /***/ "./node_modules/react-dom/cjs/react-dom.development.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
@@ -34927,12 +34868,56 @@ if (false) {} else {
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.tsx");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!***********************!*\
+  !*** ./src/index.tsx ***!
+  \***********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   mountShopping: () => (/* binding */ mountShopping)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Index() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+      children: "Hello Shopping"
+    })
+  });
+}
+function mountShopping() {
+  // var includeInDom = shoppingCart
+  // const targetElement: any = document.querySelector("#shoppingCart");
+  // if (!window.shoppingRoot) {
+  //     window.shoppingRoot = createRoot(targetElement);
+  //   }
+  //   window.shoppingRoot.render(<Index />);
+
+  var targetElement = document.querySelector("#shoppingCart");
+
+  // Check if target element exists
+  if (!targetElement) {
+    console.error("Target element not found");
+    return;
+  }
+
+  // Check if the root exists, if not, create it
+  if (!window.shoppingRoot || targetElement !== window.shoppingRoot._internalRoot.containerInfo) {
+    window.shoppingRoot = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(targetElement);
+  }
+
+  // Render the component
+  window.shoppingRoot.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Index, {}));
+}
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=shopping.bundle.js.map
