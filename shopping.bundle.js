@@ -51,6 +51,7 @@ function Index() {
   });
 }
 function mountShopping() {
+  var _window$shoppingRoot;
   var includeInDom = _export__WEBPACK_IMPORTED_MODULE_2__["default"];
   // const targetElement: any = document.querySelector("#shoppingCart");
   // if (!window.shoppingRoot) {
@@ -67,7 +68,7 @@ function mountShopping() {
   }
 
   // Check if the root exists, if not, create it
-  if (!window.shoppingRoot || targetElement !== window.shoppingRoot._internalRoot.containerInfo) {
+  if (!window.shoppingRoot || targetElement !== ((_window$shoppingRoot = window.shoppingRoot) === null || _window$shoppingRoot === void 0 || (_window$shoppingRoot = _window$shoppingRoot._internalRoot) === null || _window$shoppingRoot === void 0 ? void 0 : _window$shoppingRoot.containerInfo)) {
     window.shoppingRoot = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(targetElement);
   }
 
