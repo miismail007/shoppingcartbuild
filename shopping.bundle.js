@@ -356,8 +356,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! . */ "./src/index.tsx");
 
 var shoppingCart = {
-  init: function init() {
-    (0,___WEBPACK_IMPORTED_MODULE_0__.mountShopping)();
+  init: function init(elementId) {
+    (0,___WEBPACK_IMPORTED_MODULE_0__.mountShopping)(elementId);
   }
 };
 window.shoppingCart = shoppingCart;
@@ -386,10 +386,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function mountShopping() {
+function mountShopping(elementId) {
   var _window$shoppingRoot;
   var includeInDom = _export__WEBPACK_IMPORTED_MODULE_2__["default"];
-  var targetElement = document.querySelector("#shoppingCart");
+  var targetElement = document.querySelector("#".concat(elementId));
 
   // Check if target element exists
   if (!targetElement) {
